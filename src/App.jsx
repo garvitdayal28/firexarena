@@ -127,7 +127,7 @@ function App() {
 
             <div className="space-y-4 sm:space-y-6">
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                We host Fast Tournaments of Free Fire Max. Download and enjoy all Features
+                We host Tournaments of Free Fire Max. Download and enjoy all Features
                 and benefits.
               </p>
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
