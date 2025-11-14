@@ -3,6 +3,11 @@ import data from "./data.js";
 import React from "react";
 import logo from "./assets/logo.jpg";
 import bg1 from "./assets/bg1.jpg";
+import s1 from "./assets/s1.jpg";
+import s2 from "./assets/s2.jpg";
+import s3 from "./assets/s3.jpg";
+import s4 from "./assets/s4.jpg";
+import s5 from "./assets/s5.jpg";
 
 function App() {
   return (
@@ -127,11 +132,12 @@ function App() {
 
             <div className="space-y-4 sm:space-y-6">
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                We host Tournaments of Free Fire Max. Download and enjoy all Features
-                and benefits.
+                We host Tournaments of Free Fire Max. Download and enjoy all
+                Features and benefits.
               </p>
               <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-                All tournaments are conducted here, and both winners and participants can view the results instantly.
+                All tournaments are conducted here, and both winners and
+                participants can view the results instantly.
               </p>
             </div>
           </div>
@@ -188,34 +194,22 @@ function App() {
           {/* Screenshot Horizontal Scroll - Mobile optimized */}
           <div className="overflow-x-auto overflow-y-hidden pb-4 -mx-4 px-4">
             <div className="flex gap-3 sm:gap-4 w-max">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
+              {[
+                { img: s1, title: "Screenshot 1" },
+                { img: s2, title: "Screenshot 2" },
+                { img: s3, title: "Screenshot 3" },
+                { img: s4, title: "Screenshot 4" },
+                { img: s5, title: "Screenshot 5" },
+              ].map((item, index) => (
                 <div
-                  key={item}
-                  className="group relative w-[180px] sm:w-60 aspect-9/16 rounded-xl sm:rounded-2xl overflow-hidden border border-red-500/30 bg-linear-to-br from-red-950/20 to-blue-950/20 backdrop-blur-sm active:border-red-500/60 transition-all active:shadow-lg active:shadow-red-500/20 touch-manipulation shrink-0"
+                  key={index}
+                  className="group relative rounded-xl sm:rounded-2xl overflow-hidden border border-red-500/30 active:border-red-500/60 transition-all active:shadow-lg active:shadow-red-500/20 touch-manipulation shrink-0"
                 >
-                  <div className="w-full h-full flex items-center justify-center p-2 sm:p-4">
-                    <div className="text-center">
-                      <svg
-                        className="w-10 h-10 sm:w-16 sm:h-16 mx-auto text-red-500/50 mb-2 sm:mb-3"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"
-                        />
-                      </svg>
-                      <p className="text-gray-400 text-xs sm:text-sm">
-                        Screenshot {item}
-                      </p>
-                      <p className="text-gray-500 text-xs mt-1 hidden sm:block">
-                        Add screenshot here
-                      </p>
-                    </div>
-                  </div>
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="h-96 sm:h-[500px] w-auto"
+                  />
 
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-linear-to-t from-red-600/20 to-transparent opacity-0 group-active:opacity-100 transition-opacity"></div>
